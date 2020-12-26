@@ -1,4 +1,5 @@
 var eksisozluk = "https://eksisozluk.com";
+
 function getFaverList(){
     let favsDoc = document.getElementsByClassName('favorite-list-popup toggles-menu')[0].getElementsByTagName('div')[0];
     let faversList = favsDoc.getElementsByTagName('ul')[0].children;
@@ -12,15 +13,6 @@ function getFaverList(){
     return result;
 }
 
-function getProfile(profile){
-    var requestOptions = { method: 'GET', redirect: 'follow' };
-    var data2 = fetch(profileUrl, requestOptions)
-        .then(response => response.text())
-        .then(result => {dataa = result; data2 = result;})
-        .catch(error => console.log('error', error));
-
-    return data2;
-}
 async function sendRequests(actionUrl){
     var action = eksisozluk + actionUrl;
     console.log(action);
